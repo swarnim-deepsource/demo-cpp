@@ -1,4 +1,4 @@
-#include "stdio.h" // "stdio.h"
+#include "stdio.h"
 #include <iostream>
 
 void fn(int* r) {
