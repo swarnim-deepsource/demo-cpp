@@ -1,19 +1,7 @@
-#include "stdio.h"
-#include <iostream>
+static struct lifeline_battery_val_t last_batt_val;
+static uint32_t n_error_gauge_read = 0;
 
-void fn(int* r) {
-  printf("%d", *r);
-}
-
-int main (int argc, char *argv[]) {
-  static int* tushars = (int*)malloc(sizeof(int) * 10);
-  int var = 0;
-  int* ptr = 0;
-  // int* ptrvar = &var;
-  std::cin >> var;
-  argv[var] = "1";
-  return 0;
-  char* tt = "this is a long one I think";
-  char dst[10];
-  strcpy(dst, tt);
+static int lifeline_battery_get_battery_lvl(int * lvl, int * mv, int * T_kelvin) {
+    int gauge_readout[5] = {0,0,0,0,0};
+    if (gauge_driver_register_read(gauge_readout) != 0) {}
 }
